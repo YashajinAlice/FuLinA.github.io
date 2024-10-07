@@ -52,21 +52,21 @@ export const profileConfig: ProfileConfig = {
   bio: 'Discord機器人開發者',
   links: [
     {
-      name: 'Twitter',
-      icon: 'fa6-brands:twitter',       // Visit https://icones.js.org/ for icon codes
+      name: 'Gmail',
+      icon: 'fa6-brands:google',       // Visit https://icones.js.org/ for icon codes
                                         // You will need to install the corresponding icon set if it's not already included
                                         // `pnpm add @iconify-json/<icon-set-name>`
-      url: 'https://twitter.com',
+      url: 'overcar000@gmail.com',
     },
     {
-      name: 'Steam',
-      icon: 'fa6-brands:steam',
-      url: 'https://store.steampowered.com',
+      name: 'Discord',
+      icon: 'fa6-brands:discord',
+      url: 'https://discord.gg/Ntat5HRFqT',
     },
     {
       name: 'GitHub',
       icon: 'fa6-brands:github',
-      url: 'https://github.com/saicaca/fuwari',
+      url: 'https://github.com/YashajinAlice',
     },
   ],
 }
