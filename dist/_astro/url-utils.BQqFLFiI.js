@@ -1,0 +1,1 @@
+import"./zh_TW.Ce2G7YaE.js";function i(e,r){return e.replace(/^\/|\/$/g,"").toLowerCase()===r.replace(/^\/|\/$/g,"").toLowerCase()}function t(...e){return e.join("/").replace(/\/+/g,"/")}function u(e){return t("","/FuLinA.github.io/",e)}export{i as p,u};
