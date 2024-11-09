@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  vite-imagetools: ^6.2.7
+  vite-imagetools: ^7.0.0
   sharp: ^0.33.0
 
 importers:
@@ -43,8 +43,8 @@ importers:
         specifier: ^2.3.1
         version: 2.3.1(@types/node@22.5.1)(rollup@2.79.1)(sass@1.77.8)(stylus@0.63.0)(typescript@5.5.4)
       astro-icon:
-        specifier: ^1.1.1
-        version: 1.1.1
+        specifier: ^1.1.2
+        version: 1.1.2
       colorjs.io:
         specifier: ^0.5.2
         version: 0.5.2
@@ -1748,8 +1748,8 @@ packages:
   astro-compress@2.3.1:
     resolution: {integrity: sha512-W2rv6Vr8dZEw2CEA0/QcBEFmXCERbY8onlyixfRul1nY5moPNkk3zdiw7Id3TkIJyHpqQTP6OyfTmTp6MhOqjw==}
 
-  astro-icon@1.1.1:
-    resolution: {integrity: sha512-HKBesWk2Faw/0+klLX+epQVqdTfSzZz/9+5vxXUjTJaN/HnpDf608gRPgHh7ZtwBPNJMEFoU5GLegxoDcT56OQ==}
+  astro-icon@1.1.2:
+    resolution: {integrity: sha512-2qAHBtZLYuFEIMP0Ck0edyLi5fQmJjwP2Qbv41f8L4KAJ2sra/dH7q5lCOn4q0DHVtS0w3tPG8UKQRits3UPcg==}
 
   astro@4.15.0:
     resolution: {integrity: sha512-bL2ol1+j1Xf/7Q8DQSWP1BfkBd6RkkgVsmp9TCzYklqPSeInpAYGGsAgi+SY7Sf40Vk9o+ku6Zl1zav4MLN4uA==}
@@ -6686,7 +6686,7 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-icon@1.1.1:
+  astro-icon@1.1.2:
     dependencies:
       '@iconify/tools': 4.0.5
       '@iconify/types': 2.0.0
