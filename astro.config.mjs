@@ -32,7 +32,7 @@ const oklchToHex = str => {
 // https://astro.build/config
 export default defineConfig({
   site: 'https://fulin-net.top',
-  base: '/',
+  base: '/FuLinA.github.io/',
 
   trailingSlash: 'always',
   integrations: [
