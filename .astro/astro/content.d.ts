@@ -190,6 +190,27 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"憂傷酒館/11-11.md": {
+	id: "憂傷酒館/11-11.md";
+  slug: "憂傷酒館/11-11";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"憂傷酒館/bot-v1.0.md": {
+	id: "憂傷酒館/bot-v1.0.md";
+  slug: "憂傷酒館/bot-v10";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"鳴潮小助手/11-22.md": {
+	id: "鳴潮小助手/11-22.md";
+  slug: "鳴潮小助手/11-22";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 };
 "spec": {
 "about.md": {
