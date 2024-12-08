@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://fulin-net.top/sitemap-index.xml
