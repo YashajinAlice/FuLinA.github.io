@@ -119,8 +119,8 @@ importers:
         specifier: ^1.1.22
         version: 1.1.22
       '@iconify-json/fa6-solid':
-        specifier: ^1.1.24
-        version: 1.1.24
+        specifier: ^1.2.3
+        version: 1.2.3
       '@iconify-json/material-symbols':
         specifier: ^1.1.89
         version: 1.1.89
@@ -1094,8 +1094,8 @@ packages:
   '@iconify-json/fa6-regular@1.1.22':
     resolution: {integrity: sha512-yS7BwEU1o5DBlhEeql/d5/5Est4EvqDH8/Gi17CuCI8pkrL35sBjSw5O6mQ82wIpsqLtm1vXnO02BvRtLqxj0w==}
 
-  '@iconify-json/fa6-solid@1.1.24':
-    resolution: {integrity: sha512-ovO4kIW3CjoY36/QUTORg+7ZVlVpJqGSck+FUsqrvVJAr9MPeh3QN2UBnc9zyny41znxs7Kdc0Oz6aun4UUsyw==}
+  '@iconify-json/fa6-solid@1.2.3':
+    resolution: {integrity: sha512-C5o8YJF+ekrS4wRb/6/0SE2KjRyJlCg++IOVC/fineiRinITivsmzFRNW1MQX2xfDZ1T7bxeKxLN6lcaTG3jGA==}
 
   '@iconify-json/material-symbols@1.1.89':
     resolution: {integrity: sha512-lG/eoYGbXduksHNirl4eQ3Yh0mWX85WwmQgBjz4ebHp1g5QVfEK0W+0K83p9F0itiDXlCHcPwhFz4GHsPiCbiA==}
@@ -5953,7 +5953,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/fa6-solid@1.1.24':
+  '@iconify-json/fa6-solid@1.2.3':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -6755,7 +6755,7 @@ snapshots:
       unist-util-visit: 5.0.0
       vfile: 6.0.3
       vite: 5.4.2(@types/node@22.5.1)(lightningcss@1.25.1)(sass@1.77.8)(stylus@0.63.0)(terser@5.31.3)
-      vitefu: 0.2.5(vite@5.4.2(@types/node@22.5.1)(lightningcss@1.26.0)(sass@1.77.8)(stylus@0.63.0)(terser@5.31.6))
+      vitefu: 0.2.5(vite@5.4.2(@types/node@22.5.1)(lightningcss@1.25.1)(sass@1.77.8)(stylus@0.63.0)(terser@5.31.3))
       which-pm: 3.0.0
       xxhash-wasm: 1.0.2
       yargs-parser: 21.1.1
@@ -10286,6 +10286,10 @@ snapshots:
       sass: 1.77.8
       stylus: 0.63.0
       terser: 5.31.6
+
+  vitefu@0.2.5(vite@5.4.2(@types/node@22.5.1)(lightningcss@1.25.1)(sass@1.77.8)(stylus@0.63.0)(terser@5.31.3)):
+    optionalDependencies:
+      vite: 5.4.2(@types/node@22.5.1)(lightningcss@1.25.1)(sass@1.77.8)(stylus@0.63.0)(terser@5.31.3)
 
   vitefu@0.2.5(vite@5.4.2(@types/node@22.5.1)(lightningcss@1.26.0)(sass@1.77.8)(stylus@0.63.0)(terser@5.31.6)):
     optionalDependencies:
