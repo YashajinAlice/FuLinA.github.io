@@ -1,105 +1,145 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>系统维护中</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .container {
-            text-align: center;
-        }
-
-        .gears {
-            position: relative;
-            width: 200px;
-            height: 100px;
-            margin-bottom: 20px;
-        }
-
-        .gear {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            animation: spin 8s linear infinite;
-        }
-
-        .gear-coral {
-            left: 20px;
-            top: 20px;
-            fill: #ff7f6a;
-        }
-
-        .gear-mint {
-            right: 20px;
-            top: 20px;
-            fill: #4ade80;
-            animation-direction: reverse;
-        }
-
-        .gear-blue {
-            right: 50px;
-            top: 60px;
-            width: 30px;
-            height: 30px;
-            fill: #93c5fd;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        h1 {
-            font-size: 24px;
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 16px;
-            color: #999;
-        }
-
-        .cityscape {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="%23f3f4f6" fill-opacity="1" d="M0,32L48,37.3C96,43,192,53,288,80C384,107,480,149,576,154.7C672,160,768,128,864,112C960,96,1056,96,1152,106.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-            background-size: cover;
-            background-position: center;
-        }
-    </style>
+    <title>HTML讓Web早就無限的可能性</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
 </head>
 <body>
-    <div class="container">
-        <div class="gears">
-            <svg class="gear gear-coral" viewBox="0 0 24 24">
-                <path d="M12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm8.7-3.75l-.393.393a1.5 1.5 0 0 1-2.121 0l-.707-.707a1.5 1.5 0 0 1 0-2.121l.393-.393a.75.75 0 0 0 .135-.848l-1.444-3.01a.75.75 0 0 0-.776-.423l-.549.074a1.5 1.5 0 0 1-1.714-1.714l.074-.549a.75.75 0 0 0-.423-.776l-3.01-1.444a.75.75 0 0 0-.848.135l-.393.393a1.5 1.5 0 0 1-2.121 0L6.1 2.7a1.5 1.5 0 0 1 0-2.121l.393-.393a.75.75 0 0 0 .135-.848L5.184.782a.75.75 0 0 0-.776-.423l-.549.074A1.5 1.5 0 0 1 2.145-.28l.074-.549a.75.75 0 0 0-.423-.776L-1.214-3.05a.75.75 0 0 0-.848.135l-.393.393a1.5 1.5 0 0 1-2.121 0l-.707-.707a1.5 1.5 0 0 1 0-2.121l.393-.393a.75.75 0 0 0 .135-.848l-1.444-3.01a.75.75 0 0 0-.776-.423l-.549.074a1.5 1.5 0 0 1-1.714-1.714l.074-.549a.75.75 0 0 0-.423-.776l-3.01-1.444a.75.75 0 0 0-.848.135l-.393.393a1.5 1.5 0 0 1-2.121 0l-.707-.707a1.5 1.5 0 0 1 0-2.121l.393-.393a.75.75 0 0 0 .135-.848l-1.444-3.01a.75.75 0 0 0-.776-.423l-.549.074a1.5 1.5 0 0 1-1.714-1.714l.074-.549a.75.75 0 0 0-.423-.776l-3.01-1.444a.75.75 0 0 0-.848.135l-.393.393a1.5 1.5 0 0 1-2.121 0"/>
-            </svg>
-            <svg class="gear gear-mint" viewBox="0 0 24 24">
-                <path d="M12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm8.7-3.75l-.393.393a1.5 1.5 0 0 1-2.121 0l-.707-.707a1.5 1.5 0 0 1 0-2.121l.393-.393a.75.75 0 0 0 .135-.848l-1.444-3.01a.75.75 0 0 0-.776-.423l-.549.074a1.5 1.5 0 0 1-1.714-1.714l.074-.549a.75.75 0 0 0-.423-.776l-3.01-1.444a.75.75 0 0 0-.848.135l-.393.393a1.5 1.5 0 0 1-2.121 0L6.1 2.7a1.5 1.5 0 0 1 0-2.121l.393-.393a.75.75 0 0 0 .135-.848L5.184.782a.75.75 0 0 0-.776-.423l-.549.074A1.5 1.5 0 0 1 2.145-.28l.074-.549a.75.75 0 0 0-.423-.776L-1.214-3.05a.75.75 0 0 0-.848.135l-.393.393a1.5 1.5 0 0 1-2.121 0l-.707-.707a1.5 1.5 0 0 1 0-2.121l.393-.393a.75.75 0 0 0 .135-.848l-1.444-3.01a.75.75 0 0 0-.776-.423l-.549.074a1.5 1.5 0 0 1-1.714-1.714l.074-.549a.75.75 0 0 0-.423-.776l-3.01-1.444a.75.75 0 0 0-.848.135l-.393.393a1.5 1.5 0 0 1-2.121 0l-.707-.707a1.5 1.5 0 0 1 0-2.121l.393-.393a.75.75 0 0 0 .135-.848l-1.444-3.01a.75.75 0 0 0-.776-.423l-.549.074a1.5 1.5 0 0 1-1.714-1.714l.074-.549a.75.75 0 0 0-.423-.776l-3.01-1.444a.75.75 0 0 0-.848.135l-.393.393a1.5 1.5 0 0 1-2.121 0"/>
-            </svg>
-            <svg class="gear gear-blue" viewBox="0 0 24 24">
-                <path d="M12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm8.7-3.75l-.393.393a1.5 1.5 0 0 1-2.121 0l-.707-.707a1.5 1.5 0 0 1 0-2.121l.393-.393a.75.75 0 0 0 .135-.848l-1.444-3.01a.75.75 0 0 0-.776-.423l-.549.074a1.5 1.5 0 0 1-1.714-1.714l.074-.549a.75.75 0 0 0-.423-.776l-3.01-1.444a.75.75 0 0 0-.848.135l-.393.393a1.5 1.5 0 0 1-2.121 0L6.1 2.7a1.5 1.5 0 0 1 0-2.121l.393-.393a.75.75 0 0 0 .135-.848L5.184.782a.75.75 0 0 0-.776-.423l-.549.074A1.5 1.5 0 0 1 2.145-.28l.074-.549a.75.75 0 0 0-.423-.776L-1.214-3.05a.75.75 0 0 0-.848.135l-.393.393a1.5 1.5 0 0 1-2.121 0l-.707-.707a1.5 1.5 0 0 1 0-2.121l.393-.393a.75.75 0 0 0 .135-.848l-1.444-3.01a.75.75 0 0 0-.776-.423l-.549.074a1.5 1.5 0 0 1-1.714-1.714l.074-.549a.75.75 0 0 0-.423-.776l-3.01-1.444a.75.75 0 0 0-.848.135l-.393.393a1.5 1.5 0 0 1-2.121 0l-.707-.707a1.5 1.5 0 0 1 0-2.121l.393-.393a.75.75 0 0 0 .135-.848l-1.444-3.01a.75.75 0 0 0-.776-.423l-.549.074a1.5 1.5 0 0 1-1.714-1.714l.074-.549a.75.75 0 0 0-.423-.776l-3.01-1.444a.75.75 0 0 0-.848.135l-.393.393a1.5 1.5 0 0 1-2.121 0"/>
-            </svg>
-        </div>
-        <h1>網站重新開發中...</h1>
-        <p>別問我為什麼圖示變這樣，我也不知道XD</p>
+    <!-- 音樂播放器 -->
+    <div class="music-player">
+        <audio id="background-music" loop>
+            <source src="Mu.mp3" type="audio/mp3">
+            您的瀏覽器不支援音訊元素。
+        </audio>
+        <button id="music-toggle" class="music-btn">
+            <span class="music-icon">♪</span>
+        </button>
     </div>
-    <div class="cityscape"></div>
+
+    <!-- 導覽列 -->
+    <nav class="navbar">
+        <div class="logo">Hello {HTML} World</div>
+        <ul class="nav-links">
+            <li><a href="#home">首頁</a></li>
+            <li><a href="#about">什麼事 HTML ？</a></li>
+            <li><a href="#genres">探索 HTML 的魅力！</a></li>
+            <li><a href="#contact">聯絡我們</a></li>
+        </ul>
+    </nav>
+
+    <!-- 主題介紹區塊 -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="title">探索 HTML 的無限可能</h1>
+            <p class="subtitle">HTML可不是什麼簡單的標記語言！</p>
+            <a href="#genres" class="btn">開始探索</a>
+        </div>
+    </header>
+
+ <!-- HTML 輕鬆解說區塊 -->
+<section id="about" class="about-section">
+    <div class="container">
+        <h2 class="section-title">什麼是 HTML？</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>嘿！你有沒有想過，網頁是怎麼把文字、圖片和影片都放在一起的？答案就是 HTML！它的名字聽起來很專業——「超文本標記語言」——但其實就像是給瀏覽器看的指令，告訴它要把東西放在哪裡。</p>
+                <p>舉個例子，如果你想要在網頁上寫一句「Hello World」，用 HTML 超簡單，就像這樣：</p>
+                <pre>
+&lt;h1&gt;Hello World!&lt;/h1&gt;
+                </pre>
+                <p>這行指令會在網頁上顯示一個超大的標題，這就是 <code>&lt;h1&gt;</code> 的魔力！HTML 就是這樣，用一些標籤（比如 <code>&lt;p&gt;</code>, <code>&lt;img&gt;</code>）來定義你的內容和格式。</p>
+                <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML" target="_blank" class="link">想知道更多？快來看看 HTML 的超酷資源！</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HTML 主題教學區塊 -->
+<section id="genres" class="genres-section">
+    <div class="container">
+        <h2 class="section-title">探索 HTML 的魅力！</h2>
+        <div class="genres-grid">
+            <div class="genre-card">
+                <h3>HTML 標籤 🏷️</h3>
+                <p>HTML 的基本單位就是標籤！像 <code>&lt;h1&gt;</code> 是用來顯示標題，<code>&lt;p&gt;</code> 用於段落。每個標籤都是讓網頁鮮活起來的神奇組件！</p>
+            </div>
+            <div class="genre-card">
+                <h3>HTML 屬性 ⚙️</h3>
+                <p>標籤還能帶屬性，像 <code>class</code> 和 <code>id</code>，這就像標籤的「裝飾品」，可以讓你的網頁更有個性化！</p>
+            </div>
+            <div class="genre-card">
+                <h3>HTML + CSS 💅</h3>
+                <p>HTML 是網頁的骨架，但 CSS 才是它的時尚設計師！學會把它們結合起來，打造一個既有內容又漂亮的網站。</p>
+            </div>
+        </div>
+        <div class="cta">
+            <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML" target="_blank" class="link">開始探索 HTML 的學習資源！</a>
+        </div>
+    </div>
+</section>
+    <!-- 聯絡我們表單區塊 -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">聯絡我們</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>此欄位套用前作業部分代碼。</p>
+                    <p>該網站結構簡單，部分參考v0.dev以及W3s</p>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">訊息</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn submit-btn">送出</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾區塊 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Hello {HTML} World</h3>
+                    <p>或許還可以做些什麼？</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速連結</h4>
+                    <ul>
+                        <li><a href="#home">首頁</a></li>
+                        <li><a href="#about">Hey!</a></li>
+                        <li><a href="#genres">什麼事 HTML ？</a></li>
+                        <li><a href="#contact">聯絡我們</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>關注我們</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">FB</a>
+                        <a href="#" class="social-icon">IG</a>
+                        <a href="#" class="social-icon">YT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 World 保留所有權利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
