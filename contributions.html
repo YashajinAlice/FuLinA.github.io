@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>貢獻軌跡 - 共鳴基地</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contributions.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#00d4ff">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="T_PixRoleQNvzhu960.png" alt="Logo" class="logo-img">
+                <span class="logo-text">共鳴基地</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="profile.html">檔案</a></li>
+                <li><a href="projects.html">專案</a></li>
+                <li><a href="stats.html">統計</a></li>
+                <li><a href="contributions.html" class="active">貢獻</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="contributions-main">
+        <div class="container">
+            <!-- 页面标题 -->
+            <div class="page-header">
+                <div class="resonance-field">
+                    <div class="field-waves"></div>
+                    <div class="energy-particles"></div>
+                </div>
+                <div class="header-characters">
+                    <div class="char-group left">
+                        <img src="T_PixRoleQJinxi960.png" alt="开发者" class="header-char">
+                        <div class="char-energy"></div>
+                    </div>
+                    <div class="char-group right">
+                        <img src="T_PixRoleQChangli960.png" alt="贡献者" class="header-char">
+                        <div class="char-energy"></div>
+                    </div>
+                </div>
+                <h1 class="page-title">
+                    <span class="title-resonance">🌊</span>
+                    <span class="title-text">
+                        <span class="title-main">貢獻軌跡圖譜</span>
+                        <span class="title-sub">Contribution Resonance Map</span>
+                    </span>
+                    <div class="title-aura"></div>
+                </h1>
+                <p class="page-subtitle">
+                    記錄每一次代碼共鳴，追蹤開發者的成長軌跡與貢獻足跡
+                </p>
+            </div>
+
+            <!-- 贡献概览 -->
+            <div class="contribution-overview">
+                <div class="overview-card main-stats">
+                    <div class="card-resonance"></div>
+                    <div class="stats-character">
+                        <img src="T_PixRoleQYangyang960.png" alt="统计角色" class="stats-char-img">
+                        <div class="char-aura-ring"></div>
+                    </div>
+                    <h2>年度貢獻總覽</h2>
+                    <div class="main-stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-icon">🔥</div>
+                            <div class="stat-value" data-target="365">0</div>
+                            <div class="stat-label">總貢獻天數</div>
+                            <div class="stat-progress">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">⚡</div>
+                            <div class="stat-value" data-target="1247">0</div>
+                            <div class="stat-label">代碼提交次數</div>
+                            <div class="stat-progress">
+                                <div class="progress-fill" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">🌟</div>
+                            <div class="stat-value" data-target="23">0</div>
+                            <div class="stat-label">最長連續天數</div>
+                            <div class="stat-progress">
+                                <div class="progress-fill" style="width: 76%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">💎</div>
+                            <div class="stat-value" data-target="15">0</div>
+                            <div class="stat-label">完成專案數</div>
+                            <div class="stat-progress">
+                                <div class="progress-fill" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overview-card streak-info">
+                    <div class="card-resonance"></div>
+                    <h3>當前連擊狀態</h3>
+                    <div class="streak-display">
+                        <div class="streak-number">15</div>
+                        <div class="streak-label">天連續貢獻</div>
+                        <div class="streak-fire">🔥</div>
+                    </div>
+                    <div class="streak-progress">
+                        <div class="progress-ring">
+                            <svg width="120" height="120">
+                                <circle cx="60" cy="60" r="50" stroke="rgba(0, 212, 255, 0.2)" stroke-width="8" fill="none"/>
+                                <circle cx="60" cy="60" r="50" stroke="#00d4ff" stroke-width="8" fill="none" 
+                                        stroke-dasharray="314" stroke-dashoffset="94" 
+                                        stroke-linecap="round" class="progress-circle"/>
+                            </svg>
+                            <div class="progress-text">70%</div>
+                        </div>
+                    </div>
+                    <p class="streak-desc">距離下個里程碑還需 <strong>8天</strong></p>
+                </div>
+
+                <div class="overview-card activity-summary">
+                    <div class="card-resonance"></div>
+                    <h3>本週活動摘要</h3>
+                    <div class="activity-items">
+                        <div class="activity-item">
+                            <div class="activity-dot commit"></div>
+                            <div class="activity-content">
+                                <span class="activity-count">23</span>
+                                <span class="activity-label">代碼提交</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-dot review"></div>
+                            <div class="activity-content">
+                                <span class="activity-count">8</span>
+                                <span class="activity-label">代碼審查</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-dot issue"></div>
+                            <div class="activity-content">
+                                <span class="activity-count">5</span>
+                                <span class="activity-label">問題解決</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-dot feature"></div>
+                            <div class="activity-content">
+                                <span class="activity-count">2</span>
+                                <span class="activity-label">新功能</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 贡献热力图 -->
+            <div class="contribution-heatmap-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-icon">🔥</span>
+                        共鳴頻率圖譜
+                        <div class="title-energy-flow"></div>
+                    </h2>
+                    <div class="heatmap-controls">
+                        <button class="control-btn active" data-year="2024">2024</button>
+                        <button class="control-btn" data-year="2023">2023</button>
+                        <button class="control-btn" data-year="all">全部</button>
+                    </div>
+                </div>
+
+                <div class="heatmap-container">
+                    <div class="heatmap-background">
+                        <div class="bg-pattern"></div>
+                    </div>
+                    
+                    <div class="contribution-graph">
+                        <div class="graph-months">
+                            <span>1月</span><span>2月</span><span>3月</span><span>4月</span>
+                            <span>5月</span><span>6月</span><span>7月</span><span>8月</span>
+                            <span>9月</span><span>10月</span><span>11月</span><span>12月</span>
+                        </div>
+                        
+                        <div class="graph-content">
+                            <div class="graph-days">
+                                <span>一</span><span>三</span><span>五</span><span>日</span>
+                            </div>
+                            <div class="contribution-grid" id="contributionGrid">
+                                <!-- 动态生成贡献格子 -->
+                            </div>
+                        </div>
+                        
+                        <div class="graph-legend">
+                            <span class="legend-text">少</span>
+                            <div class="legend-colors">
+                                <div class="legend-cell" data-level="0" title="無貢獻"></div>
+                                <div class="legend-cell" data-level="1" title="1-3次貢獻"></div>
+                                <div class="legend-cell" data-level="2" title="4-6次貢獻"></div>
+                                <div class="legend-cell" data-level="3" title="7-9次貢獻"></div>
+                                <div class="legend-cell" data-level="4" title="10+次貢獻"></div>
+                            </div>
+                            <span class="legend-text">多</span>
+                        </div>
+                    </div>
+
+                    <div class="heatmap-stats">
+                        <div class="stat-badge">
+                            <span class="badge-label">總貢獻</span>
+                            <span class="badge-value" id="totalContributions">0</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="badge-label">活躍週數</span>
+                            <span class="badge-value">48/52</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="badge-label">平均每週</span>
+                            <span class="badge-value">24次</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 贡献详细分析 -->
+            <div class="contribution-analysis">
+                <h2 class="section-title">
+                    <span class="title-icon">📊</span>
+                    貢獻深度分析
+                </h2>
+                
+                <div class="analysis-grid">
+                    <!-- 月度趋势 -->
+                    <div class="analysis-card">
+                        <div class="card-header">
+                            <h3>月度貢獻趨勢</h3>
+                            <div class="card-character">
+                                <img src="T_PixRoleQSanhua960.png" alt="分析师" class="card-char">
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="monthlyTrendChart"></canvas>
+                        </div>
+                        <div class="chart-insights">
+                            <div class="insight">
+                                <span class="insight-icon">📈</span>
+                                <span>6月最活躍: 156次貢獻</span>
+                            </div>
+                            <div class="insight">
+                                <span class="insight-icon">🎯</span>
+                                <span>平均增長率: +12.5%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 贡献类型分布 -->
+                    <div class="analysis-card">
+                        <div class="card-header">
+                            <h3>貢獻類型分布</h3>
+                            <div class="card-character">
+                                <img src="T_PixRoleQZhezhi960.png" alt="开发者" class="card-char">
+                            </div>
+                        </div>
+                        <div class="contribution-types">
+                            <div class="type-item">
+                                <div class="type-icon commit">💻</div>
+                                <div class="type-info">
+                                    <span class="type-name">代碼提交</span>
+                                    <div class="type-bar">
+                                        <div class="type-progress" style="width: 65%"></div>
+                                    </div>
+                                    <span class="type-percent">65%</span>
+                                </div>
+                            </div>
+                            <div class="type-item">
+                                <div class="type-icon review">👁️</div>
+                                <div class="type-info">
+                                    <span class="type-name">代碼審查</span>
+                                    <div class="type-bar">
+                                        <div class="type-progress" style="width: 20%"></div>
+                                    </div>
+                                    <span class="type-percent">20%</span>
+                                </div>
+                            </div>
+                            <div class="type-item">
+                                <div class="type-icon issue">🐛</div>
+                                <div class="type-info">
+                                    <span class="type-name">問題修復</span>
+                                    <div class="type-bar">
+                                        <div class="type-progress" style="width: 10%"></div>
+                                    </div>
+                                    <span class="type-percent">10%</span>
+                                </div>
+                            </div>
+                            <div class="type-item">
+                                <div class="type-icon docs">📚</div>
+                                <div class="type-info">
+                                    <span class="type-name">文檔更新</span>
+                                    <div class="type-bar">
+                                        <div class="type-progress" style="width: 5%"></div>
+                                    </div>
+                                    <span class="type-percent">5%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 活跃时间分析 -->
+                    <div class="analysis-card full-width">
+                        <div class="card-header">
+                            <h3>活躍時間熱力圖</h3>
+                            <div class="time-stats">
+                                <span class="peak-time">高峰時段: 20:00-22:00</span>
+                                <span class="active-days">最活躍: 週二、週四</span>
+                            </div>
+                        </div>
+                        <div class="time-heatmap">
+                            <div class="heatmap-hours">
+                                <span>0</span><span>6</span><span>12</span><span>18</span><span>24</span>
+                            </div>
+                            <div class="heatmap-grid">
+                                <div class="heatmap-days">
+                                    <span>一</span><span>二</span><span>三</span><span>四</span>
+                                    <span>五</span><span>六</span><span>日</span>
+                                </div>
+                                <div class="heatmap-cells" id="timeHeatmap">
+                                    <!-- 动态生成时间热力图 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 成就与里程碑 -->
+            <div class="achievements-section">
+                <h2 class="section-title">
+                    <span class="title-icon">🏆</span>
+                    貢獻成就殿堂
+                </h2>
+                
+                <div class="achievements-showcase">
+                    <div class="achievement-card legendary achieved">
+                        <div class="achievement-bg"></div>
+                        <div class="achievement-character">
+                            <img src="T_PixRoleQJiyan960.png" alt="传奇成就" class="achievement-char">
+                            <div class="char-legendary-aura"></div>
+                        </div>
+                        <div class="achievement-content">
+                            <div class="achievement-icon">👑</div>
+                            <h3>代碼共鳴大師</h3>
+                            <p>連續365天保持代碼貢獻</p>
+                            <div class="achievement-date">2024年3月15日達成</div>
+                        </div>
+                        <div class="achievement-glow legendary"></div>
+                    </div>
+
+                    <div class="achievement-card epic achieved">
+                        <div class="achievement-bg"></div>
+                        <div class="achievement-character">
+                            <img src="T_PixRoleQXiangliyao960.png" alt="史诗成就" class="achievement-char">
+                            <div class="char-epic-aura"></div>
+                        </div>
+                        <div class="achievement-content">
+                            <div class="achievement-icon">⚡</div>
+                            <h3>閃電開發者</h3>
+                            <p>單日完成10+次代碼提交</p>
+                            <div class="achievement-date">2024年6月8日達成</div>
+                        </div>
+                        <div class="achievement-glow epic"></div>
+                    </div>
+
+                    <div class="achievement-card rare achieved">
+                        <div class="achievement-bg"></div>
+                        <div class="achievement-character">
+                            <img src="T_PixRoleQLingyang960.png" alt="稀有成就" class="achievement-char">
+                            <div class="char-rare-aura"></div>
+                        </div>
+                        <div class="achievement-content">
+                            <div class="achievement-icon">🌟</div>
+                            <h3>夜貓子程序員</h3>
+                            <p>深夜時段(22:00-02:00)貢獻100+次</p>
+                            <div class="achievement-date">2024年5月20日達成</div>
+                        </div>
+                        <div class="achievement-glow rare"></div>
+                    </div>
+
+                    <div class="achievement-card common in-progress">
+                        <div class="achievement-bg"></div>
+                        <div class="achievement-character">
+                            <img src="T_PixRoleQNanzhu960.png" alt="进行中成就" class="achievement-char">
+                            <div class="char-common-aura"></div>
+                        </div>
+                        <div class="achievement-content">
+                            <div class="achievement-icon">🚀</div>
+                            <h3>千次提交里程碑</h3>
+                            <p>累計完成1000次代碼提交</p>
+                            <div class="achievement-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 78%"></div>
+                                </div>
+                                <span class="progress-text">780/1000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 贡献排行榜 -->
+            <div class="leaderboard-section">
+                <h2 class="section-title">
+                    <span class="title-icon">🥇</span>
+                    貢獻者排行榜
+                </h2>
+                
+                <div class="leaderboard">
+                    <div class="leaderboard-podium">
+                        <div class="podium-item second">
+                            <div class="podium-character">
+                                <img src="T_PixRoleQChangli960.png" alt="第二名" class="podium-char">
+                                <div class="podium-rank">2</div>
+                            </div>
+                            <div class="podium-info">
+                                <h4>長離</h4>
+                                <span class="podium-score">892</span>
+                            </div>
+                            <div class="podium-base silver"></div>
+                        </div>
+                        
+                        <div class="podium-item first">
+                            <div class="podium-character">
+                                <img src="T_PixRoleQJinxi960.png" alt="第一名" class="podium-char">
+                                <div class="podium-rank">1</div>
+                                <div class="crown">👑</div>
+                            </div>
+                            <div class="podium-info">
+                                <h4>芙檁</h4>
+                                <span class="podium-score">1247</span>
+                            </div>
+                            <div class="podium-base gold"></div>
+                        </div>
+                        
+                        <div class="podium-item third">
+                            <div class="podium-character">
+                                <img src="T_PixRoleQYangyang960.png" alt="第三名" class="podium-char">
+                                <div class="podium-rank">3</div>
+                            </div>
+                            <div class="podium-info">
+                                <h4>秧秧</h4>
+                                <span class="podium-score">756</span>
+                            </div>
+                            <div class="podium-base bronze"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="leaderboard-list">
+                        <div class="list-item">
+                            <span class="rank">4</span>
+                            <img src="T_PixRoleQYinlin.png" alt="忌炎" class="list-avatar">
+                            <span class="name">忌炎</span>
+                            <span class="score">634</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="rank">5</span>
+                            <img src="T_PixRoleQSanhua960.png" alt="散华" class="list-avatar">
+                            <span class="name">散華</span>
+                            <span class="score">521</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="rank">6</span>
+                            <img src="T_PixRoleQChixia960.png" alt="炽霞" class="list-avatar">
+                            <span class="name">熾霞</span>
+                            <span class="score">445</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 背景效果 -->
+    <div class="background-effects">
+        <div class="resonance-field-bg"></div>
+        <div class="contribution-particles"></div>
+        <div class="energy-streams"></div>
+    </div>
+
+    <!-- 数据提示框 -->
+    <div class="tooltip" id="contributionTooltip">
+        <div class="tooltip-content">
+            <div class="tooltip-header">
+                <span class="tooltip-icon">🔥</span>
+                <span class="tooltip-title"></span>
+            </div>
+            <div class="tooltip-value"></div>
+            <div class="tooltip-date"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="contributions.js"></script>
+</body>
+</html>

@@ -56,7 +56,9 @@ body {
 }
 
 @keyframes wave {
-  0%, 60%, 100% {
+  0%,
+  60%,
+  100% {
     transform: scale(1);
     opacity: 1;
   }
@@ -83,8 +85,12 @@ body {
 }
 
 @keyframes progress {
-  0% { width: 0%; }
-  100% { width: 100%; }
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 /* 导航栏 */
@@ -186,8 +192,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: 
-    radial-gradient(2px 2px at 20px 30px, #00d4ff, transparent),
+  background-image: radial-gradient(2px 2px at 20px 30px, #00d4ff, transparent),
     radial-gradient(2px 2px at 40px 70px, rgba(0, 212, 255, 0.5), transparent),
     radial-gradient(1px 1px at 90px 40px, #0099cc, transparent);
   background-repeat: repeat;
@@ -196,10 +201,18 @@ body {
 }
 
 @keyframes float {
-  0% { transform: translateY(0px) translateX(0px); }
-  33% { transform: translateY(-10px) translateX(10px); }
-  66% { transform: translateY(5px) translateX(-5px); }
-  100% { transform: translateY(0px) translateX(0px); }
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  33% {
+    transform: translateY(-10px) translateX(10px);
+  }
+  66% {
+    transform: translateY(5px) translateX(-5px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
 }
 
 .hero-content {
@@ -239,8 +252,12 @@ body {
 }
 
 @keyframes titleGlow {
-  0% { filter: brightness(1); }
-  100% { filter: brightness(1.2); }
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(1.2);
+  }
 }
 
 .hero-subtitle {
@@ -339,13 +356,24 @@ body {
 }
 
 @keyframes characterFloat {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 @keyframes glowPulse {
-  0% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
-  100% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
+  0% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 }
 
 /* 容器 */
@@ -696,7 +724,7 @@ body {
 
 .code-block-mobile code {
   color: #00d4ff;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
 }
 
 .success-message-mobile {
@@ -894,7 +922,7 @@ body {
   .hero-title {
     font-size: 3rem;
   }
-  
+
   .section-title {
     font-size: 2.5rem;
   }
@@ -1314,7 +1342,9 @@ html {
 
 /* 防止移动端缩放 */
 @media (max-width: 768px) {
-  input, textarea, select {
+  input,
+  textarea,
+  select {
     font-size: 16px;
   }
 }

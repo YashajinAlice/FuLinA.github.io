@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>專案展示 - 共鳴基地</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#00d4ff">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="T_PixRoleQNvzhu960.png" alt="Logo" class="logo-img">
+                <span class="logo-text">共鳴基地</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="profile.html">檔案</a></li>
+                <li><a href="projects.html" class="active">專案</a></li>
+                <li><a href="links.html">友鏈</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="projects-main">
+        <div class="container">
+            <!-- 页面标题 -->
+            <div class="page-header">
+                <h1 class="page-title">
+                    <span class="title-icon">🚀</span>
+                    專案展示
+                    <div class="title-glow"></div>
+                </h1>
+                <p class="page-subtitle">探索我為鳴潮社群開發的各種工具和功能</p>
+            </div>
+
+            <!-- 项目筛选 -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">
+                    <span>全部</span>
+                    <div class="filter-glow"></div>
+                </button>
+                <button class="filter-btn" data-filter="bot">
+                    <span>Bot功能</span>
+                    <div class="filter-glow"></div>
+                </button>
+                <button class="filter-btn" data-filter="web">
+                    <span>網頁應用</span>
+                    <div class="filter-glow"></div>
+                </button>
+                <button class="filter-btn" data-filter="tool">
+                    <span>工具</span>
+                    <div class="filter-glow"></div>
+                </button>
+                <button class="filter-btn" data-filter="api">
+                    <span>API</span>
+                    <div class="filter-glow"></div>
+                </button>
+            </div>
+
+            <!-- 项目网格 -->
+            <div class="projects-grid">
+                <!-- 主要项目 -->
+                <div class="project-card featured" data-category="bot">
+                    <div class="project-image">
+                        <img src="T_PixRoleQJinxi960.png" alt="WuWu Bot">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="action-btn demo">
+                                    <span>演示</span>
+                                    <div class="btn-ripple"></div>
+                                </button>
+                                <button class="action-btn code">
+                                    <span>代碼</span>
+                                    <div class="btn-ripple"></div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="featured-badge">
+                            <span>⭐ 主要專案</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>WuWu Bot</h3>
+                            <div class="project-status online">
+                                <span class="status-dot"></span>
+                                <span>運行中</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            鳴潮官方Discord機器人，提供角色面板生成、抽卡記錄查詢、深塔數據分析等功能。
+                            支援國際服和國服，為漂泊者們提供全方位的遊戲數據服務。
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Discord.js</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Canvas API</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-value">1.2K+</span>
+                                <span class="stat-label">用戶</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">24</span>
+                                <span class="stat-label">功能</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">99.9%</span>
+                                <span class="stat-label">正常運行</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 其他项目 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="T_PixRoleQYangyang960.png" alt="共鳴基地網站">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="action-btn demo">
+                                    <span>訪問</span>
+                                    <div class="btn-ripple"></div>
+                                </button>
+                                <button class="action-btn code">
+                                    <span>代碼</span>
+                                    <div class="btn-ripple"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>共鳴基地網站</h3>
+                            <div class="project-status online">
+                                <span class="status-dot"></span>
+                                <span>運行中</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            響應式的鳴潮主題網站，提供Bot使用教程、功能介紹和社群資源。
+                            採用現代化設計，完美適配移動端設備。
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-value">500+</span>
+                                <span class="stat-label">日訪問</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">95%</span>
+                                <span class="stat-label">移動端</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="api">
+                    <div class="project-image">
+                        <img src="T_PixRoleQChangli960.png" alt="鳴潮API">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="action-btn demo">
+                                    <span>文檔</span>
+                                    <div class="btn-ripple"></div>
+                                </button>
+                                <button class="action-btn code">
+                                    <span>GitHub</span>
+                                    <div class="btn-ripple"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>鳴潮數據API</h3>
+                            <div class="project-status development">
+                                <span class="status-dot"></span>
+                                <span>開發中</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            提供鳴潮遊戲數據的RESTful API服務，包括角色信息、武器數據、
+                            聲骸屬性等。為第三方開發者提供穩定的數據接口。
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">JWT</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-value">50+</span>
+                                <span class="stat-label">端點</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">10ms</span>
+                                <span class="stat-label">響應時間</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="tool">
+                    <div class="project-image">
+                        <img src="T_PixRoleQYinlin.png" alt="聲骸計算器">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="action-btn demo">
+                                    <span>使用</span>
+                                    <div class="btn-ripple"></div>
+                                </button>
+                                <button class="action-btn code">
+                                    <span>代碼</span>
+                                    <div class="btn-ripple"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>聲骸計算器</h3>
+                            <div class="project-status online">
+                                <span class="status-dot"></span>
+                                <span>可用</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            智能聲骸搭配計算工具，根據角色特性推薦最佳聲骸組合，
+                            計算傷害期望值，幫助玩家優化角色配置。
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">PWA</span>
+                            <span class="tech-tag">LocalStorage</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-value">200+</span>
+                                <span class="stat-label">日使用</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">15</span>
+                                <span class="stat-label">角色支援</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="bot">
+                    <div class="project-image">
+                        <img src="T_PixRoleQSanhua960.png" alt="抽卡分析">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="action-btn demo">
+                                    <span>演示</span>
+                                    <div class="btn-ripple"></div>
+                                </button>
+                                <button class="action-btn code">
+                                    <span>代碼</span>
+                                    <div class="btn-ripple"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>抽卡分析系統</h3>
+                            <div class="project-status online">
+                                <span class="status-dot"></span>
+                                <span>運行中</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            詳細的抽卡記錄分析工具，提供抽卡統計、保底計算、
+                            運氣評估等功能，幫助玩家了解自己的抽卡情況。
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Matplotlib</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">SQLite</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-value">800+</span>
+                                <span class="stat-label">分析記錄</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">12</span>
+                                <span class="stat-label">統計維度</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="T_PixRoleQZhezhi960.png" alt="角色圖鑑">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="action-btn demo">
+                                    <span>瀏覽</span>
+                                    <div class="btn-ripple"></div>
+                                </button>
+                                <button class="action-btn code">
+                                    <span>代碼</span>
+                                    <div class="btn-ripple"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>角色圖鑑</h3>
+                            <div class="project-status online">
+                                <span class="status-dot"></span>
+                                <span>運行中</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            完整的鳴潮角色資料庫，包含角色技能、天賦、突破材料、
+                            配裝推薦等詳細信息，是玩家的最佳參考工具。
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Vercel</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-value">25+</span>
+                                <span class="stat-label">角色</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">1K+</span>
+                                <span class="stat-label">日查詢</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 开源贡献 -->
+            <div class="opensource-section">
+                <h2 class="section-title">
+                    <span class="title-icon">💝</span>
+                    開源貢獻
+                </h2>
+                <div class="opensource-grid">
+                    <div class="opensource-card">
+                        <div class="opensource-header">
+                            <div class="repo-icon">📦</div>
+                            <div class="repo-info">
+                                <h3>wuthering-waves-toolkit</h3>
+                                <p>鳴潮開發工具包</p>
+                            </div>
+                            <div class="repo-stats">
+                                <span class="star-count">⭐ 156</span>
+                            </div>
+                        </div>
+                        <p class="repo-description">
+                            為鳴潮開發者提供的工具包，包含API封裝、數據模型、工具函數等。
+                        </p>
+                        <div class="repo-tech">
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">npm</span>
+                        </div>
+                    </div>
+
+                    <div class="opensource-card">
+                        <div class="opensource-header">
+                            <div class="repo-icon">🎨</div>
+                            <div class="repo-info">
+                                <h3>wuwa-ui-components</h3>
+                                <p>鳴潮UI組件庫</p>
+                            </div>
+                            <div class="repo-stats">
+                                <span class="star-count">⭐ 89</span>
+                            </div>
+                        </div>
+                        <p class="repo-description">
+                            鳴潮風格的UI組件庫，幫助開發者快速構建遊戲主題的網頁應用。
+                        </p>
+                        <div class="repo-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Storybook</span>
+                        </div>
+                    </div>
+
+                    <div class="opensource-card">
+                        <div class="opensource-header">
+                            <div class="repo-icon">📊</div>
+                            <div class="repo-info">
+                                <h3>wuwa-data-parser</h3>
+                                <p>數據解析器</p>
+                            </div>
+                            <div class="repo-stats">
+                                <span class="star-count">⭐ 67</span>
+                            </div>
+                        </div>
+                        <p class="repo-description">
+                            解析鳴潮遊戲數據的工具，支援多種數據格式的轉換和處理。
+                        </p>
+                        <div class="repo-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">CLI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 背景效果 -->
+    <div class="background-effects">
+        <div class="floating-code"></div>
+        <div class="project-particles"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="projects.js"></script>
+</body>
+</html>
