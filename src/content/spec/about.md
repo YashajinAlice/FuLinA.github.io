@@ -1,9 +1,45 @@
-# About
-This is the demo site for [Fuwari](https://github.com/saicaca/fuwari).
+# 關於
 
-::github{repo="saicaca/fuwari"}
+👋 **嗨，各位漂泊者們！我是芙檁 (FuLin)。**
 
-> ### Sources of images used in this site
-> - [Unsplash](https://unsplash.com/)
-> - [星と少女](https://www.pixiv.net/artworks/108916539) by [Stella](https://www.pixiv.net/users/93273965)
-> - [Rabbit - v1.4 Showcase](https://civitai.com/posts/586908) by [Rabbit_YourMajesty](https://civitai.com/user/Rabbit_YourMajesty)
+作為一名熱衷於遊戲世界的開發者，我深耕於 **Discord Bot 開發**，並在《鳴潮》社群中，同時也是一位專注的 **WWUID (鳴潮 UID) 開發者**。我熱愛將程式碼與遊戲結合，打造創新且實用的工具，豐富玩家的體驗。
+
+🕹️ **我的熱情源於：**
+* **遊戲探索：** 沉浸於各種遊戲的樂趣中，從中汲取靈感，思考如何用技術提升遊戲體驗。
+* **程式創造：** 將腦海中的想法轉化為實際可運行的程式，享受從無到有的成就感。
+* **音樂陪伴：** 編程之餘，音樂是我的靈感泉源與最佳夥伴。
+
+💻 **我的技術棧涵蓋：**
+* **Python (PY)：** 熟練運用於 Discord Bot 和各種自動化、數據處理任務的開發。
+* **JavaScript (JS)：** 具備前端互動與後端服務開發能力。
+* **C++ & C#：** 涉獵底層開發與遊戲相關應用，理解高效能程式設計。
+
+✨ **WWUID開發者的視角：**
+我致力於開發與《鳴潮》遊戲 UID 相關的應用，旨在為玩家提供更便捷、更深入的數據查詢與分析工具。無論是角色練度、聲骸配置，還是遊戲數據的解析，我都希望能用技術為大家帶來更多價值。
+
+我樂於探索新技術，也期待能與志同道合的朋友們交流學習，共同打造更多有趣的專案。
+
+---
+
+期待在程式碼的世界，或《鳴潮》的廣闊天地中與您相遇！
+
+---
+##  關於我們
+
+- GitHub: [@YashajinAlice](https://github.com/YashajinAlice)
+- Discord: [加入我們的服务器](#)
+
+##  團隊成員
+
+- 開發: 芙檁（YashajinAlice）
+- wiki:閒人（吟吟的霖霖很吟的吟霖狗）
+
+- 管理組
+1.汐汐不汐汐想汐汐的汐狗
+2.Peter桑§單推§菲比/柯萊塔
+
+---
+
+<p align="center">
+  <i>以上含本網站歸芙檁所有！</i>
+</p>
