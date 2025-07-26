@@ -1,11 +1,12 @@
 ---
-title: 幫助基本功能大全
+title: wwuid指令基礎教程
 published: 2025-07-26
-description: "基本指令教程"
-image: "/01.jpg
-tags: ["教程"]
-category: Guides
-draft: false
+description: 'new'
+image: './01.jpg'
+tags: [教程]
+category: '教程'
+draft: false 
+lang: ''
 ---
 
 ## 前言
