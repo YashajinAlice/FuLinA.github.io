@@ -1,7 +1,7 @@
 ---
 title: wwuid指令基礎教程
 published: 2025-07-26
-description: 'new'
+description: 'wwuid基本指令教程（尚未補齊）'
 image: './01.jpg'
 tags: [教程]
 category: '教程'
