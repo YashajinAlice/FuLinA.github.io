@@ -1,0 +1,147 @@
+---
+// 滑鼠粒子動畫組件
+import { mouseAnimationConfig } from '../config'
+---
+
+{mouseAnimationConfig.enable && mouseAnimationConfig.particles.enable && (
+  <canvas id="mouse-particles" class="mouse-particles-canvas"></canvas>
+)}
+
+<style>
+  .mouse-particles-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9997;
+    opacity: 0.6;
+  }
+
+  /* 在觸控設備上隱藏 */
+  @media (hover: none) and (pointer: coarse) {
+    .mouse-particles-canvas {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  class MouseParticles {
+    constructor() {
+      this.canvas = document.getElementById('mouse-particles');
+      this.ctx = this.canvas.getContext('2d');
+      this.particles = [];
+      this.mouse = { x: 0, y: 0 };
+      this.isActive = false;
+      
+      this.init();
+    }
+
+    init() {
+      // 檢查是否為觸控設備
+      if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        return;
+      }
+
+      this.resizeCanvas();
+      this.bindEvents();
+      this.animate();
+    }
+
+    resizeCanvas() {
+      this.canvas.width = window.innerWidth;
+      this.canvas.height = window.innerHeight;
+    }
+
+    bindEvents() {
+      // 滑鼠移動
+      document.addEventListener('mousemove', (e) => {
+        this.mouse.x = e.clientX;
+        this.mouse.y = e.clientY;
+        this.isActive = true;
+        
+        // 創建粒子
+        if (Math.random() > 0.7) {
+          this.createParticle();
+        }
+      });
+
+      // 視窗大小改變
+      window.addEventListener('resize', () => {
+        this.resizeCanvas();
+      });
+
+      // 滑鼠離開頁面
+      document.addEventListener('mouseleave', () => {
+        this.isActive = false;
+      });
+    }
+
+    createParticle() {
+      const particle = {
+        x: this.mouse.x,
+        y: this.mouse.y,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        life: 1,
+        decay: Math.random() * 0.02 + 0.01,
+        size: Math.random() * 3 + 1,
+        color: `hsl(${Math.random() * 60 + 240}, 70%, 60%)`
+      };
+      
+      this.particles.push(particle);
+    }
+
+    updateParticles() {
+      for (let i = this.particles.length - 1; i >= 0; i--) {
+        const particle = this.particles[i];
+        
+        // 更新位置
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+        
+        // 更新生命值
+        particle.life -= particle.decay;
+        
+        // 移除死亡粒子
+        if (particle.life <= 0) {
+          this.particles.splice(i, 1);
+        }
+      }
+    }
+
+    drawParticles() {
+      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+      
+      this.particles.forEach(particle => {
+        this.ctx.save();
+        this.ctx.globalAlpha = particle.life;
+        this.ctx.fillStyle = particle.color;
+        this.ctx.beginPath();
+        this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        this.ctx.fill();
+        this.ctx.restore();
+      });
+    }
+
+    animate() {
+      this.updateParticles();
+      this.drawParticles();
+      requestAnimationFrame(() => this.animate());
+    }
+  }
+
+  // 初始化粒子系統
+  document.addEventListener('DOMContentLoaded', () => {
+    new MouseParticles();
+  });
+
+  // 支持頁面切換
+  document.addEventListener('swup:page:view', () => {
+    setTimeout(() => {
+      new MouseParticles();
+    }, 100);
+  });
+</script>

@@ -1,0 +1,168 @@
+---
+// 大字動畫組件
+interface Props {
+  texts: string[]
+  interval?: number
+  className?: string
+}
+
+const { texts, interval = 3000, className = "" } = Astro.props
+---
+
+<div class={`animated-text-container ${className}`}>
+  <div id="animated-text" class="animated-text">
+    {texts[0]}
+  </div>
+</div>
+
+<style>
+  .animated-text-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    overflow: visible;
+    padding: 2rem 1rem;
+    width: 100%;
+  }
+
+  .animated-text {
+    font-size: clamp(2rem, 8vw, 6rem);
+    font-weight: 900;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary), #8b5cf6, #06b6d4);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 3s ease-in-out infinite, text-fade 0.5s ease-in-out;
+    white-space: nowrap;
+    line-height: 1.2;
+    text-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+    padding: 1rem;
+    margin: 0;
+    overflow: visible;
+    word-break: keep-all;
+    letter-spacing: -0.02em;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes text-fade {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .animated-text.fade-out {
+    animation: text-fade-out 0.5s ease-in-out forwards;
+  }
+
+  @keyframes text-fade-out {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px) scale(0.9);
+    }
+  }
+
+  /* 響應式設計 */
+  @media (max-width: 768px) {
+    .animated-text-container {
+      min-height: 150px;
+      padding: 1rem 0.5rem;
+    }
+    
+    .animated-text {
+      font-size: clamp(1.5rem, 6vw, 4rem);
+      padding: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .animated-text {
+      font-size: clamp(1.2rem, 5vw, 3rem);
+      padding: 0.25rem;
+    }
+  }
+</style>
+
+<script define:vars={{ texts, interval }}>
+  class AnimatedText {
+    constructor() {
+      this.textElement = document.getElementById('animated-text');
+      this.texts = texts;
+      this.currentIndex = 0;
+      this.interval = interval;
+      this.isAnimating = false;
+      
+      this.init();
+    }
+
+    init() {
+      if (!this.textElement || this.texts.length <= 1) return;
+      
+      this.startAnimation();
+    }
+
+    startAnimation() {
+      setInterval(() => {
+        this.changeText();
+      }, this.interval);
+    }
+
+    async changeText() {
+      if (this.isAnimating) return;
+      
+      this.isAnimating = true;
+      
+      // 淡出動畫
+      this.textElement.classList.add('fade-out');
+      
+      await this.wait(500);
+      
+      // 切換文字
+      this.currentIndex = (this.currentIndex + 1) % this.texts.length;
+      this.textElement.textContent = this.texts[this.currentIndex];
+      
+      // 移除淡出類名，觸發淡入動畫
+      this.textElement.classList.remove('fade-out');
+      
+      await this.wait(500);
+      
+      this.isAnimating = false;
+    }
+
+    wait(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+  }
+
+  // 初始化動畫文字
+  document.addEventListener('DOMContentLoaded', () => {
+    new AnimatedText();
+  });
+
+  // 支持頁面切換
+  document.addEventListener('swup:page:view', () => {
+    setTimeout(() => {
+      new AnimatedText();
+    }, 100);
+  });
+</script>

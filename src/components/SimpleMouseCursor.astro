@@ -1,0 +1,195 @@
+---
+// 簡化的滑鼠游標動畫組件
+---
+
+<div id="simple-cursor" class="simple-cursor"></div>
+<div id="simple-trail" class="simple-trail"></div>
+
+<style>
+  .simple-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: var(--primary);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: transform 0.1s ease;
+    opacity: 0;
+  }
+
+  .simple-trail {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0.6;
+    transition: all 0.15s ease;
+  }
+
+  /* 滑鼠懸停效果 */
+  .simple-cursor.hover {
+    transform: scale(1.5);
+    background: var(--primary);
+  }
+
+  .simple-trail.hover {
+    transform: scale(1.2);
+  }
+
+  /* 點擊效果 */
+  .simple-cursor.click {
+    transform: scale(0.8);
+  }
+
+  .simple-trail.click {
+    transform: scale(0.6);
+  }
+
+  /* 隱藏原始游標 */
+  body {
+    cursor: none;
+  }
+
+  /* 在觸控設備上隱藏自定義游標 */
+  @media (hover: none) and (pointer: coarse) {
+    .simple-cursor,
+    .simple-trail {
+      display: none;
+    }
+    
+    body {
+      cursor: auto;
+    }
+  }
+</style>
+
+<script>
+  class SimpleMouseCursor {
+    constructor() {
+      this.cursor = document.getElementById('simple-cursor');
+      this.trail = document.getElementById('simple-trail');
+      this.isVisible = false;
+      
+      this.init();
+    }
+
+    init() {
+      // 檢查是否為觸控設備
+      if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        return;
+      }
+
+      // 滑鼠移動事件
+      document.addEventListener('mousemove', (e) => {
+        this.moveCursor(e);
+        this.showCursor();
+      });
+
+      // 滑鼠進入頁面
+      document.addEventListener('mouseenter', () => {
+        this.showCursor();
+      });
+
+      // 滑鼠離開頁面
+      document.addEventListener('mouseleave', () => {
+        this.hideCursor();
+      });
+
+      // 滑鼠點擊事件
+      document.addEventListener('mousedown', () => {
+        this.clickCursor();
+      });
+
+      document.addEventListener('mouseup', () => {
+        this.releaseCursor();
+      });
+
+      // 懸停效果
+      this.addHoverEffects();
+    }
+
+    moveCursor(e) {
+      if (!this.cursor || !this.trail) return;
+
+      // 主游標位置
+      this.cursor.style.left = e.clientX - 10 + 'px';
+      this.cursor.style.top = e.clientY - 10 + 'px';
+
+      // 拖尾效果
+      setTimeout(() => {
+        if (this.trail) {
+          this.trail.style.left = e.clientX - 4 + 'px';
+          this.trail.style.top = e.clientY - 4 + 'px';
+        }
+      }, 50);
+    }
+
+    showCursor() {
+      if (!this.isVisible && this.cursor && this.trail) {
+        this.cursor.style.opacity = '1';
+        this.trail.style.opacity = '0.6';
+        this.isVisible = true;
+      }
+    }
+
+    hideCursor() {
+      if (this.cursor && this.trail) {
+        this.cursor.style.opacity = '0';
+        this.trail.style.opacity = '0';
+        this.isVisible = false;
+      }
+    }
+
+    clickCursor() {
+      if (this.cursor && this.trail) {
+        this.cursor.classList.add('click');
+        this.trail.classList.add('click');
+      }
+    }
+
+    releaseCursor() {
+      if (this.cursor && this.trail) {
+        this.cursor.classList.remove('click');
+        this.trail.classList.remove('click');
+      }
+    }
+
+    addHoverEffects() {
+      // 為可點擊元素添加懸停效果
+      const hoverElements = document.querySelectorAll('a, button, .btn-regular, .link, .card-base');
+      
+      hoverElements.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+          if (this.cursor && this.trail) {
+            this.cursor.classList.add('hover');
+            this.trail.classList.add('hover');
+          }
+        });
+
+        element.addEventListener('mouseleave', () => {
+          if (this.cursor && this.trail) {
+            this.cursor.classList.remove('hover');
+            this.trail.classList.remove('hover');
+          }
+        });
+      });
+    }
+  }
+
+  // 初始化自定義游標
+  document.addEventListener('DOMContentLoaded', () => {
+    new SimpleMouseCursor();
+  });
+
+  // 支持頁面切換
+  document.addEventListener('swup:page:view', () => {
+    setTimeout(() => {
+      new SimpleMouseCursor();
+    }, 100);
+  });
+</script>

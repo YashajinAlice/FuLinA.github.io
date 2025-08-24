@@ -1,0 +1,68 @@
+---
+// 骨架屏載入動畫組件
+---
+
+<div class="skeleton-container">
+    <div class="skeleton-card animate-pulse">
+        <div class="skeleton-avatar"></div>
+        <div class="skeleton-content">
+            <div class="skeleton-title"></div>
+            <div class="skeleton-text"></div>
+            <div class="skeleton-text short"></div>
+        </div>
+    </div>
+    
+    <div class="skeleton-card animate-pulse">
+        <div class="skeleton-title"></div>
+        <div class="skeleton-button"></div>
+        <div class="skeleton-button"></div>
+        <div class="skeleton-button"></div>
+    </div>
+</div>
+
+<style>
+    .skeleton-container {
+        @apply space-y-4;
+    }
+    
+    .skeleton-card {
+        @apply bg-[var(--card-bg)] rounded-[var(--radius-large)] p-4;
+    }
+    
+    .skeleton-avatar {
+        @apply w-16 h-16 bg-gray-300 dark:bg-gray-600 rounded-full mx-auto mb-3;
+    }
+    
+    .skeleton-content {
+        @apply space-y-2;
+    }
+    
+    .skeleton-title {
+        @apply h-4 bg-gray-300 dark:bg-gray-600 rounded w-3/4 mx-auto;
+    }
+    
+    .skeleton-text {
+        @apply h-3 bg-gray-300 dark:bg-gray-600 rounded;
+    }
+    
+    .skeleton-text.short {
+        @apply w-1/2;
+    }
+    
+    .skeleton-button {
+        @apply h-12 bg-gray-300 dark:bg-gray-600 rounded-lg mb-2;
+    }
+    
+    .animate-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: .5;
+        }
+    }
+</style>

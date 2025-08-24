@@ -63,6 +63,38 @@ export type LicenseConfig = {
   url: string
 }
 
+export type SponsorConfig = {
+  enable: boolean
+  title: string
+  description: string
+  links: {
+    name: string
+    url: string
+    icon: string
+    color: string
+  }[]
+}
+
+export type MouseAnimationConfig = {
+  enable: boolean
+  cursor: {
+    enable: boolean
+    size: number
+    trail: boolean
+    hoverEffect: boolean
+    clickEffect: boolean
+  }
+  particles: {
+    enable: boolean
+    density: number
+    colors: string[]
+    size: {
+      min: number
+      max: number
+    }
+  }
+}
+
 export type LIGHT_DARK_MODE =
   | typeof LIGHT_MODE
   | typeof DARK_MODE

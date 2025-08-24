@@ -3,6 +3,8 @@ import type {
   NavBarConfig,
   ProfileConfig,
   SiteConfig,
+  SponsorConfig,
+  MouseAnimationConfig,
 } from './types/config'
 import { LinkPreset } from './types/config'
 
@@ -39,6 +41,11 @@ export const navBarConfig: NavBarConfig = {
     LinkPreset.Archive,
     LinkPreset.About,
     {
+      name: '機器人更新日誌',
+      url: '/bot-changelog/',
+      external: false,
+    },
+    {
       name: 'Discord社群',
       url: 'https://discord.gg/wawuuid',     // Internal links should not include the base path, as it is automatically added
       external: true,                               // Show an external link icon and will open in a new tab
@@ -68,4 +75,50 @@ export const licenseConfig: LicenseConfig = {
   enable: true,
   name: 'CC BY-NC-SA 4.0',
   url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+}
+
+export const sponsorConfig: SponsorConfig = {
+  enable: true,
+  title: '贊助支持',
+  description: '如果這個部落格對您有幫助，歡迎贊助支持！',
+  links: [
+    {
+      name: 'PayPal 贊助',
+      url: 'https://www.paypal.com/ncp/payment/PF79NLJFNYG4N',
+      icon: 'fa6-brands:paypal',
+      color: 'text-blue-600'
+    },
+    {
+      name: '請我喝咖啡',
+      url: 'https://ko-fi.com/fulin66002',
+      icon: 'material-symbols:coffee-outline',
+      color: 'text-orange-500'
+    },
+    {
+      name: 'GitHub Sponsors',
+      url: 'https://github.com/sponsors/YashajinAlice',
+      icon: 'material-symbols:favorite-outline',
+      color: 'text-pink-500'
+    }
+  ]
+}
+
+export const mouseAnimationConfig: MouseAnimationConfig = {
+  enable: true,
+  cursor: {
+    enable: true,
+    size: 20,
+    trail: true,
+    hoverEffect: true,
+    clickEffect: true
+  },
+  particles: {
+    enable: true,
+    density: 0.7,
+    colors: ['#3b82f6', '#8b5cf6', '#06b6d4', '#10b981'],
+    size: {
+      min: 1,
+      max: 4
+    }
+  }
 }

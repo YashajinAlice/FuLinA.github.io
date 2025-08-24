@@ -1,0 +1,293 @@
+---
+import AnimatedText from './AnimatedText.astro'
+import { Icon } from 'astro-icon/components'
+---
+
+<div class="home-hero">
+  <div class="hero-content">
+    <div class="hero-text-section">
+      <AnimatedText 
+        texts={[
+          '歡迎來到共鳴Blog',
+          '芙檩快累瘫了'
+        ]} 
+        interval={3500}
+        className="hero-title"
+      />
+      
+      <div class="hero-subtitle">
+        <p class="subtitle-text">
+          8/24公告：近期更像项目居多，各位多加耐心等候！
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <Icon name="material-symbols:group-rounded" class="stat-icon" />
+            <span class="stat-number">7000+</span>
+            <span class="stat-label">用戶</span>
+          </div>
+          <div class="stat-item">
+            <Icon name="material-symbols:update-rounded" class="stat-icon" />
+            <span class="stat-number">50+</span>
+            <span class="stat-label">功能</span>
+          </div>
+          <div class="stat-item">
+            <Icon name="material-symbols:schedule-rounded" class="stat-icon" />
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">運行</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-actions">
+        <a href="/bot-changelog/" class="btn-primary">
+          <Icon name="material-symbols:update-rounded" class="btn-icon" />
+          查看更新日誌
+        </a>
+        <a href="https://discord.gg/wawuuid" target="_blank" rel="noopener" class="btn-secondary">
+          <Icon name="fa6-brands:discord" class="btn-icon" />
+          加入 Discord
+        </a>
+      </div>
+    </div>
+    
+    <div class="hero-visual">
+      <div class="floating-elements">
+        <div class="floating-icon" style="animation-delay: 0s;">
+          <Icon name="material-symbols:music-note-rounded" class="floating-icon-svg" />
+        </div>
+        <div class="floating-icon" style="animation-delay: 1s;">
+          <Icon name="material-symbols:gamepad-rounded" class="floating-icon-svg" />
+        </div>
+        <div class="floating-icon" style="animation-delay: 2s;">
+          <Icon name="material-symbols:chat-rounded" class="floating-icon-svg" />
+        </div>
+        <div class="floating-icon" style="animation-delay: 3s;">
+          <Icon name="material-symbols:settings-rounded" class="floating-icon-svg" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .home-hero {
+    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(139, 92, 246, 0.05) 100%);
+    border-radius: var(--radius-large);
+    padding: 4rem 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: visible;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hero-subtitle {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .subtitle-text {
+    font-size: 1.2rem;
+    color: var(--text-75);
+    line-height: 1.6;
+    max-width: 600px;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    min-width: 80px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+
+  .stat-item:hover {
+    transform: translateY(-2px);
+  }
+
+  .stat-icon {
+    font-size: 1.5rem;
+    color: var(--primary);
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-90);
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    color: var(--text-50);
+    font-weight: 500;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    background: var(--primary);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+  }
+
+  .btn-secondary {
+    background: var(--btn-regular-bg);
+    color: var(--btn-content);
+    border: 2px solid transparent;
+  }
+
+  .btn-secondary:hover {
+    background: var(--btn-regular-bg-hover);
+    transform: translateY(-2px);
+  }
+
+  .btn-icon {
+    font-size: 1.2rem;
+  }
+
+  .hero-visual {
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+
+  .floating-elements {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .floating-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: var(--card-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .floating-icon:nth-child(1) {
+    top: 20%;
+    left: 20%;
+  }
+
+  .floating-icon:nth-child(2) {
+    top: 60%;
+    right: 20%;
+  }
+
+  .floating-icon:nth-child(3) {
+    bottom: 20%;
+    left: 30%;
+  }
+
+  .floating-icon:nth-child(4) {
+    top: 40%;
+    right: 10%;
+  }
+
+  .floating-icon-svg {
+    font-size: 1.5rem;
+    color: var(--primary);
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+      transform: translateY(-20px) rotate(5deg);
+    }
+    66% {
+      transform: translateY(-10px) rotate(-5deg);
+    }
+  }
+
+  /* 響應式設計 */
+  @media (max-width: 768px) {
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .home-hero {
+      padding: 3rem 1rem;
+    }
+
+    .hero-stats {
+      justify-content: center;
+    }
+
+    .hero-actions {
+      justify-content: center;
+    }
+
+    .hero-visual {
+      width: 250px;
+      height: 250px;
+      margin: 0 auto;
+    }
+
+    .floating-icon {
+      width: 50px;
+      height: 50px;
+    }
+
+    .floating-icon-svg {
+      font-size: 1.2rem;
+    }
+  }
+</style>

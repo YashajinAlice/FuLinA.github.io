@@ -1,0 +1,62 @@
+---
+// 載入動畫管理組件
+---
+
+<div id="loading-progress" class="loading-progress"></div>
+
+<script>
+  // 載入動畫管理
+  class LoadingManager {
+    constructor() {
+      this.progressBar = document.getElementById('loading-progress');
+      this.isLoading = true;
+      this.init();
+    }
+
+    init() {
+      // 頁面載入完成後隱藏進度條
+      window.addEventListener('load', () => {
+        this.hideProgressBar();
+      });
+
+      // 如果頁面已經載入完成，立即隱藏進度條
+      if (document.readyState === 'complete') {
+        this.hideProgressBar();
+      }
+
+      // 監聽頁面切換事件
+      document.addEventListener('swup:page:view', () => {
+        this.showProgressBar();
+        setTimeout(() => {
+          this.hideProgressBar();
+        }, 300);
+      });
+    }
+
+    showProgressBar() {
+      if (this.progressBar) {
+        this.progressBar.style.opacity = '1';
+        this.progressBar.style.transform = 'scaleX(0)';
+        setTimeout(() => {
+          this.progressBar.style.transform = 'scaleX(1)';
+        }, 10);
+      }
+    }
+
+    hideProgressBar() {
+      if (this.progressBar) {
+        setTimeout(() => {
+          this.progressBar.style.opacity = '0';
+          setTimeout(() => {
+            if (this.progressBar && this.progressBar.parentNode) {
+              this.progressBar.remove();
+            }
+          }, 300);
+        }, 500);
+      }
+    }
+  }
+
+  // 初始化載入管理器
+  new LoadingManager();
+</script>
