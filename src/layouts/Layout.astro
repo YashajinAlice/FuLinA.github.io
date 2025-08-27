@@ -4,6 +4,10 @@ import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 import ImageWrapper from '@components/misc/ImageWrapper.astro'
+import OpeningAnimation from '@components/OpeningAnimation.astro'
+import AnimeBackground from '@components/AnimeBackground.astro'
+import LatestPostNotification from '@components/LatestPostNotification.svelte'
+import AnnouncementModal from '@components/AnnouncementModal.svelte'
 
 import { profileConfig, siteConfig } from '@/config'
 import ConfigCarrier from '@components/ConfigCarrier.astro'
@@ -137,6 +141,19 @@ const bannerOffset = bannerOffsetByPosition[siteConfig.banner.position || 'cente
 		  data-overlayscrollbars-initialize
 	>
 		<ConfigCarrier></ConfigCarrier>
+		
+		<!-- 開場動畫 -->
+		<OpeningAnimation />
+		
+		<!-- 二次元背景動畫 -->
+		<AnimeBackground />
+		
+		<!-- 最新文章通知 -->
+		<LatestPostNotification client:load />
+		
+		<!-- 彈窗公告 -->
+		<AnnouncementModal client:load />
+		
 		<GlobalStyles>
 		{siteConfig.banner.enable && <div id="banner-wrapper" class="absolute -top-[30vh] w-full transition duration-700 overflow-hidden">
 			<ImageWrapper id="banner" alt="Banner image of the blog" class:list={["object-cover h-full transition duration-700 opacity-0 scale-105"]}

@@ -1,6 +1,7 @@
 ---
 import AnimatedText from './AnimatedText.astro'
 import { Icon } from 'astro-icon/components'
+import AnimeButton from './AnimeButton.astro'
 ---
 
 <div class="home-hero">
@@ -39,14 +40,12 @@ import { Icon } from 'astro-icon/components'
       </div>
       
       <div class="hero-actions">
-        <a href="/bot-changelog/" class="btn-primary">
-          <Icon name="material-symbols:update-rounded" class="btn-icon" />
+        <AnimeButton href="/bot-changelog/" icon="material-symbols:update-rounded" variant="primary">
           查看更新日誌
-        </a>
-        <a href="https://discord.gg/wawuuid" target="_blank" rel="noopener" class="btn-secondary">
-          <Icon name="fa6-brands:discord" class="btn-icon" />
+        </AnimeButton>
+        <AnimeButton href="https://discord.gg/wawuuid" icon="fa6-brands:discord" variant="secondary">
           加入 Discord
-        </a>
+        </AnimeButton>
       </div>
     </div>
     
@@ -71,12 +70,15 @@ import { Icon } from 'astro-icon/components'
 
 <style>
   .home-hero {
-    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(139, 92, 246, 0.05) 100%);
+    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(139, 92, 246, 0.1) 50%, rgba(236, 72, 153, 0.05) 100%);
     border-radius: var(--radius-large);
     padding: 4rem 2rem;
     margin-bottom: 3rem;
     position: relative;
     overflow: visible;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   }
 
   .hero-content {

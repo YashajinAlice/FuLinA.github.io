@@ -41,8 +41,8 @@ export const navBarConfig: NavBarConfig = {
     LinkPreset.Archive,
     LinkPreset.About,
     {
-      name: '機器人更新日誌',
-      url: '/bot-changelog/',
+      name: 'wwuid主要教程',
+      url: '/posts/guide/',
       external: false,
     },
     {

@@ -1,8 +1,14 @@
 ---
 // 骨架屏載入動畫組件
+import AnimeLoadingSpinner from './AnimeLoadingSpinner.astro'
 ---
 
 <div class="skeleton-container">
+    <!-- 載入動畫 -->
+    <div class="flex justify-center items-center py-8">
+        <AnimeLoadingSpinner size="lg" />
+    </div>
+    
     <div class="skeleton-card animate-pulse">
         <div class="skeleton-avatar"></div>
         <div class="skeleton-content">

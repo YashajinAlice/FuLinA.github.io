@@ -1,0 +1,56 @@
+---
+interface Props {
+  size?: 'sm' | 'md' | 'lg'
+  class?: string
+}
+
+const { size = 'md', class: className } = Astro.props
+
+const sizeClasses = {
+  sm: 'w-8 h-8',
+  md: 'w-12 h-12',
+  lg: 'w-16 h-16'
+}
+---
+
+<div class={`relative ${sizeClasses[size]} ${className || ''}`}>
+  <!-- 外圈旋轉環 -->
+  <div class="absolute inset-0 border-4 border-purple-200/30 rounded-full"></div>
+  <div class="absolute inset-0 border-4 border-transparent border-t-purple-500 rounded-full animate-spin"></div>
+  
+  <!-- 中圈旋轉環 -->
+  <div class="absolute inset-2 border-pink-200/30 rounded-full" style="border-width: 3px;"></div>
+  <div class="absolute inset-2 border-transparent border-t-pink-500 rounded-full animate-spin-reverse" style="border-width: 3px;"></div>
+  
+  <!-- 內圈旋轉環 -->
+  <div class="absolute inset-4 border-2 border-cyan-200/30 rounded-full"></div>
+  <div class="absolute inset-4 border-2 border-transparent border-t-cyan-500 rounded-full animate-spin"></div>
+  
+  <!-- 中央點 -->
+  <div class="absolute inset-0 flex items-center justify-center">
+    <div class="w-2 h-2 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full animate-pulse"></div>
+  </div>
+  
+  <!-- 裝飾性光點 -->
+  <div class="absolute -top-1 -left-1 w-2 h-2 bg-yellow-400 rounded-full animate-ping"></div>
+  <div class="absolute -top-1 -right-1 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-ping" style="animation-delay: 0.5s;"></div>
+  <div class="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-pink-400 rounded-full animate-ping" style="animation-delay: 1s;"></div>
+  <div class="absolute -bottom-1 -right-1 w-2 h-2 bg-purple-400 rounded-full animate-ping" style="animation-delay: 1.5s;"></div>
+</div>
+
+<style>
+  @keyframes spin-reverse {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .animate-spin-reverse {
+    animation: spin-reverse 2s linear infinite;
+  }
+  
+
+</style>

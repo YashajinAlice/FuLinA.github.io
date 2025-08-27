@@ -6,7 +6,7 @@ import Sponsor from './Sponsor.astro'
 
 const className = Astro.props.class
 ---
-<div id="sidebar" class:list={[className, "w-full"]}>
+<div id="sidebar" class:list={[className, "w-full backdrop-blur-sm bg-white/60 dark:bg-gray-900/60 rounded-2xl p-4 border border-white/20 dark:border-gray-700/20 shadow-lg"]}>
     <div class="flex flex-col w-full gap-4 mb-4">
         <Profile></Profile>
     </div>

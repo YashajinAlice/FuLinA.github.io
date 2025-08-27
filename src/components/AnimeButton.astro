@@ -1,0 +1,66 @@
+---
+import { Icon } from 'astro-icon/components'
+
+interface Props {
+  href?: string
+  icon?: string
+  class?: string
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost'
+  size?: 'sm' | 'md' | 'lg'
+}
+
+const { href, icon, class: className, variant = 'primary', size = 'md' } = Astro.props
+
+const baseClasses = "inline-flex items-center justify-center font-medium rounded-xl transition-all duration-300 relative overflow-hidden group"
+const variantClasses = {
+  primary: "bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white shadow-lg hover:shadow-xl hover:scale-105",
+  secondary: "bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white shadow-lg hover:shadow-xl hover:scale-105",
+  outline: "border-2 border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-white hover:scale-105",
+  ghost: "text-purple-500 hover:bg-purple-500/10 hover:scale-105"
+}
+
+const sizeClasses = {
+  sm: "px-4 py-2 text-sm",
+  md: "px-6 py-3 text-base",
+  lg: "px-8 py-4 text-lg"
+}
+
+const buttonClasses = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className || ''}`
+---
+
+<a href={href} class={buttonClasses}>
+  <!-- 背景動畫效果 -->
+  <div class="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+  
+  <!-- 內容 -->
+  <div class="relative flex items-center gap-2">
+    {icon && <Icon name={icon} class="w-5 h-5" />}
+    <slot />
+  </div>
+  
+  <!-- 邊框光效 -->
+  <div class="absolute inset-0 rounded-xl border border-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</a>
+
+<style>
+  /* 懸停時的脈衝效果 */
+  .group:hover::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, #8b5cf6, #ec4899, #06b6d4, #8b5cf6);
+    background-size: 400% 400%;
+    border-radius: inherit;
+    z-index: -1;
+    animation: pulse-border 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-border {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+</style>

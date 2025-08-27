@@ -4,9 +4,9 @@ import { Icon } from 'astro-icon/components'
 
 <!-- There can't be a filter on parent element, or it will break `fixed` -->
 <div class="back-to-top-wrapper hidden lg:block">
-    <div id="back-to-top-btn" class="back-to-top-btn hide flex items-center rounded-2xl overflow-hidden transition" onclick="backToTop()">
-        <button aria-label="Back to Top" class="btn-card h-[3.75rem] w-[3.75rem]">
-            <Icon name="material-symbols:keyboard-arrow-up-rounded" class="mx-auto"></Icon>
+    <div id="back-to-top-btn" class="back-to-top-btn hide flex items-center rounded-2xl overflow-hidden transition backdrop-blur-sm bg-gradient-to-br from-purple-500/90 to-pink-500/90 border border-white/20 shadow-lg hover:shadow-xl hover:scale-110" onclick="backToTop()">
+        <button aria-label="Back to Top" class="h-[3.75rem] w-[3.75rem] text-white hover:text-white/80 transition-colors">
+            <Icon name="material-symbols:keyboard-arrow-up-rounded" class="mx-auto text-2xl"></Icon>
         </button>
     </div>
 </div>

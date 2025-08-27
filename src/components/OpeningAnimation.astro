@@ -1,0 +1,165 @@
+---
+import { Icon } from 'astro-icon/components'
+import { siteConfig } from '../config'
+---
+
+<div id="opening-animation" class="fixed inset-0 z-[9999] bg-gradient-to-br from-purple-900 via-pink-800 to-indigo-900">
+  <!-- 背景動畫效果 -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-purple-400/20 via-pink-400/20 to-indigo-400/20 animate-spin-slow"></div>
+    <div class="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-gradient-to-bl from-cyan-400/15 via-blue-400/15 to-purple-400/15 animate-pulse"></div>
+    <div class="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-gradient-to-tr from-pink-400/15 via-red-400/15 to-orange-400/15 animate-bounce-slow"></div>
+  </div>
+
+  <!-- 左門 -->
+  <div id="left-door" class="absolute left-0 top-0 w-1/2 h-full bg-gradient-to-r from-purple-800/90 to-purple-600/90 transform transition-transform duration-1000 ease-in-out z-10">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-400/10 to-purple-600/20"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 border-4 border-purple-300/50 rounded-full animate-ping"></div>
+  </div>
+
+  <!-- 右門 -->
+  <div id="right-door" class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-pink-800/90 to-pink-600/90 transform transition-transform duration-1000 ease-in-out z-10">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-pink-400/10 to-pink-600/20"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 border-4 border-pink-300/50 rounded-full animate-ping"></div>
+  </div>
+
+  <!-- 中央Logo -->
+  <div id="center-logo" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+    <div class="relative">
+      <!-- 外圈光環 -->
+      <div class="absolute inset-0 w-32 h-32 border-4 border-purple-300/30 rounded-full animate-spin-slow"></div>
+      <div class="absolute inset-2 w-28 h-28 border-4 border-pink-300/40 rounded-full animate-spin-slow-reverse"></div>
+      <div class="absolute inset-4 w-24 h-24 border-4 border-cyan-300/50 rounded-full animate-spin-slow"></div>
+      
+      <!-- Logo容器 -->
+      <div class="relative w-20 h-20 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-full flex items-center justify-center shadow-2xl animate-pulse">
+        <Icon name="material-symbols:home-outline-rounded" class="text-white text-3xl animate-bounce" />
+      </div>
+      
+      <!-- 標題 -->
+      <div class="absolute -bottom-16 left-1/2 transform -translate-x-1/2 text-center">
+        <h1 class="text-2xl font-bold text-white mb-2 animate-fade-in-up">{siteConfig.title}</h1>
+        <p class="text-purple-200 text-sm animate-fade-in-up-delay">{siteConfig.subtitle}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 進度條 -->
+  <div id="progress-container" class="absolute bottom-20 left-1/2 transform -translate-x-1/2 w-64 h-2 bg-white/20 rounded-full overflow-hidden z-30">
+    <div id="progress-bar" class="h-full bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 rounded-full transition-all duration-4000 ease-out transform scale-x-0 origin-left"></div>
+  </div>
+
+  <!-- 載入文字 -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/80 text-sm animate-pulse z-30">
+    正在載入精彩內容...
+  </div>
+</div>
+
+<style>
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  @keyframes spin-slow-reverse {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+  }
+  
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade-in-up-delay {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    50% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+  }
+  
+  .animate-spin-slow-reverse {
+    animation: spin-slow-reverse 6s linear infinite;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce-slow 3s ease-in-out infinite;
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 1s ease-out forwards;
+  }
+  
+  .animate-fade-in-up-delay {
+    animation: fade-in-up-delay 1.5s ease-out forwards;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const openingAnimation = document.getElementById('opening-animation');
+    const leftDoor = document.getElementById('left-door');
+    const rightDoor = document.getElementById('right-door');
+    const centerLogo = document.getElementById('center-logo');
+    const progressBar = document.getElementById('progress-bar');
+    
+    if (!openingAnimation || !leftDoor || !rightDoor || !centerLogo || !progressBar) return;
+    
+    // 開始進度條動畫
+    setTimeout(() => {
+      progressBar.style.transform = 'scaleX(1)';
+    }, 500);
+    
+    // 4秒後開始開門動畫
+    setTimeout(() => {
+      // Logo消失動畫
+      centerLogo.style.transition = 'all 0.5s ease-in-out';
+      centerLogo.style.transform = 'translate(-50%, -50%) scale(0.8)';
+      centerLogo.style.opacity = '0';
+      
+      // 延遲開門
+      setTimeout(() => {
+        // 左門向左移動
+        leftDoor.style.transform = 'translateX(-100%)';
+        
+        // 右門向右移動
+        rightDoor.style.transform = 'translateX(100%)';
+        
+        // 整體淡出
+        setTimeout(() => {
+          openingAnimation.style.transition = 'opacity 0.5s ease-out';
+          openingAnimation.style.opacity = '0';
+          
+          setTimeout(() => {
+            openingAnimation.remove();
+            // 觸發頁面載入完成事件
+            window.dispatchEvent(new CustomEvent('opening-animation-complete'));
+          }, 500);
+        }, 1000);
+      }, 500);
+    }, 4000);
+  });
+</script>
