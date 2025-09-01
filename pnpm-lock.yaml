@@ -146,8 +146,8 @@ importers:
         specifier: ^5.4.4
         version: 5.4.4
       remark-github-admonitions-to-directives:
-        specifier: ^1.0.5
-        version: 1.0.5
+        specifier: ^2.0.0
+        version: 2.1.0
       sass:
         specifier: ^1.77.8
         version: 1.77.8
@@ -3995,8 +3995,9 @@ packages:
   remark-gfm@4.0.0:
     resolution: {integrity: sha512-U92vJgBPkbw4Zfu/IiW2oTZLSL3Zpv+uI7My2eq8JxKgqraFdU8YUGicEJCEgSbeaG+QDFqIcwwfMTOEelPxuA==}
 
-  remark-github-admonitions-to-directives@1.0.5:
-    resolution: {integrity: sha512-MSRzDs51HGbUrHJ0es8POuxwJiUycWw4aYCTN2RZhdOm5UvyqdB8ApWoGBj9QAiPSHKw2HWl1hd5rRzWxVfNew==}
+  remark-github-admonitions-to-directives@2.1.0:
+    resolution: {integrity: sha512-bI3E4Oj1pKY3ym2IQrrVCdORgEu0+mSrWgpCYFNy8QvytfnLs/nAacVPjkWU/JzDMUiQio2k4nTFP7bsIr9TSA==}
+    engines: {pnpm: '>=9.0.0'}
 
   remark-math@6.0.0:
     resolution: {integrity: sha512-MMqgnP74Igy+S3WwnhQ7kqGlEerTETXMvJhrUzDikVZ2/uogJCb+WHUg97hK9/jcfc0dkD73s3LN8zU49cTEtA==}
@@ -9483,7 +9484,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  remark-github-admonitions-to-directives@1.0.5:
+  remark-github-admonitions-to-directives@2.1.0:
     dependencies:
       '@types/mdast': 4.0.4
       mdast-util-directive: 3.0.0
