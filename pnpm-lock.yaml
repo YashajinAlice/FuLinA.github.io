@@ -58,8 +58,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0
       overlayscrollbars:
-        specifier: ^2.10.0
-        version: 2.10.0
+        specifier: ^2.12.0
+        version: 2.12.0
       pagefind:
         specifier: ^1.1.0
         version: 1.1.0
@@ -3461,8 +3461,8 @@ packages:
     resolution: {integrity: sha512-GQEkNkH/GHOhPFXcqZs3IDahXEQcQxsSjEkK4KvEEST4t7eNzoMjxTzef+EZ+JluDEV+Raoi3WQ2CflnRdSVnQ==}
     engines: {node: '>=18'}
 
-  overlayscrollbars@2.10.0:
-    resolution: {integrity: sha512-diNMeEafWTE0A4GJfwRpdBp2rE/BEvrhptBdBcDu8/UeytWcdCy9Td8tZWnztJeJ26f8/uHCWfPnPUC/dtgJdw==}
+  overlayscrollbars@2.12.0:
+    resolution: {integrity: sha512-mWJ5MOkcZ/ljHwfLw8+bN0V9ziGCoNoqULcp994j5DTGNQvnkWKWkA7rnO29Kyew5AoHxUnJ4Ndqfcl0HSQjXg==}
 
   p-finally@1.0.0:
     resolution: {integrity: sha512-LICb2p9CB7FS+0eR1oqWnHhp0FljGLZCWBE9aix0Uye9W8LTQPwMTYVGWQWIw9RdQiDg4+epXQODwIYJtSJaow==}
@@ -8923,7 +8923,7 @@ snapshots:
       string-width: 7.2.0
       strip-ansi: 7.1.0
 
-  overlayscrollbars@2.10.0: {}
+  overlayscrollbars@2.12.0: {}
 
   p-finally@1.0.0: {}
 
